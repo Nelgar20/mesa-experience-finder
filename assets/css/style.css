@@ -35,7 +35,6 @@ h2 {
 
 p {
   font-size: 30px;
-  max-width: 450px;
   text-align: center;
   color: var(--secondary-color);
 }
@@ -52,7 +51,7 @@ button {
 }
 
 button:hover {
-  color:var(--primary-color);
+  color: var(--primary-color);
   background-color: var(--secondary-color);
   cursor: pointer;
 }
@@ -74,12 +73,60 @@ button:hover {
   display: none;
 }
 
+/* Intro section */
+
+#intro p {
+  max-width: 450px;
+}
+
+#intro .border {
+  margin-bottom: 2rem;
+}
+
 /* Quiz section */
 
-.container div {
+#quiz-box.container div {
   margin: 5rem 1rem 2rem 1rem;
 }
 
 #quiz-box .border {
   max-width: 500px;
+}
+
+/* Result section */
+
+.card {
+  max-width: 500px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+.card-grid {
+  display: grid;
+  grid-auto-flow: column;
+  gap: 1rem;
+}
+
+.card-grid.hide {
+  display: none;
+}
+
+.card img {
+  width: 100%;
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+.card h3 {
+  color: var(--secondary-color);
+  font-family: var(--secondary-font);
+  font-size: 50px;
+  font-weight: bold;
+  text-align: center;
+  margin: 20px;
+}
+
+.card p {
+  font-size: 20px;
+  text-align: center;
+  color: var(--secondary-color);
 }
