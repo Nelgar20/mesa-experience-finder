@@ -34,15 +34,21 @@ p {
 }
 
 button {
-  margin: 10px;
+  margin: 30px;
   font-family: var(--secondary-font);
-  font-size: 35px;
+  font-size: 70px;
   font-weight: bold;
   border: 2px solid #ffad1f;
   border-radius: 25%;
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 3px 20px;
+}
+
+button:hover {
+  color:var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .container {
