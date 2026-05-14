@@ -1,7 +1,7 @@
 // Questions and answers
 const QnA = [
     {
-        question: "What is the occasion?",
+        question: "For what occasion do you require our service?",
         answers: [
             {
                 text: "Learn cooking techniques",
@@ -78,3 +78,29 @@ const QnA = [
     }
 ];
 
+let currentQuestionIndex = 0;
+
+let score = {
+    cookingLessons: 0,
+    privateDining: 0,
+    specialEvent: 0
+};
+
+// HTML elements
+const startBtn = document.getElementById("str-btn");
+const introSection = document.getElementById("intro");
+const quizSection = document.getElementById("quiz-box");
+
+// Start quiz
+startBtn.addEventListener("click", startQuiz);
+
+// Functions
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+
+    introSection.classList.add("hide");
+    quizSection.classList.remove("hide");
+
+    // showQuestion();
+}
