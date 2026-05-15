@@ -48,7 +48,12 @@ let score = {
 const startBtn = document.getElementById("str-btn");
 const introSection = document.getElementById("intro");
 const quizSection = document.getElementById("quiz-box");
-const questionText = document.getElementById("question-text")
+const questionText = document.getElementById("question-text");
+const answerButtons = document.getElementById("answer-btn")
+
+const privateDiningCard = document.getElementById("private-dining")
+const specialEventCard = document.getElementById("special-events")
+const cookingLessonsCard = document.getElementById("cooking-lessons")
 
 
 // Start quiz
@@ -63,7 +68,7 @@ function startQuiz() {
     introSection.classList.add("hide");
     quizSection.classList.remove("hide");
 
-    // showQuestion();
+    showQuestion();
 }
 
 // Display the questions
