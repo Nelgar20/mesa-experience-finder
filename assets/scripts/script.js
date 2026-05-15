@@ -1,5 +1,5 @@
 // Questions and answers
-const QnA = [
+const questions = [
     {
         question: "For what occasion do you require our service?",
         answers: [
@@ -90,12 +90,15 @@ let score = {
 const startBtn = document.getElementById("str-btn");
 const introSection = document.getElementById("intro");
 const quizSection = document.getElementById("quiz-box");
+const questionText = document.getElementById("question-text")
+
 
 // Start quiz
 startBtn.addEventListener("click", startQuiz);
 
 // Functions
 
+// Start the quiz
 function startQuiz() {
     currentQuestionIndex = 0;
 
@@ -103,4 +106,10 @@ function startQuiz() {
     quizSection.classList.remove("hide");
 
     // showQuestion();
+}
+
+// Display the questions
+function showQuestion() {
+    const currentQuestion = questions[currentQuestionIndex];
+
 }

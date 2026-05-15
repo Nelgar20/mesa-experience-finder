@@ -33,13 +33,19 @@ h2 {
   text-align: center;
 }
 
-p {
+button {
+  font-family: var(--primary-font);
   font-size: 30px;
-  text-align: center;
+  width: 100%;
+  margin: 5px;
+  /* border: 2px solid #ffad1f; */
+  /* border-radius: 25%; */
   color: var(--secondary-color);
+  background-color: var(--primary-color);
+  /* padding: 3px 20px; */
 }
 
-button {
+.btn {
   font-family: var(--secondary-font);
   font-size: 70px;
   font-weight: bold;
@@ -48,9 +54,10 @@ button {
   color: var(--secondary-color);
   background-color: var(--primary-color);
   padding: 3px 20px;
+  max-width: fit-content;
 }
 
-button:hover {
+.btn:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   cursor: pointer;
@@ -77,6 +84,9 @@ button:hover {
 
 #intro p {
   max-width: 450px;
+  font-size: 30px;
+  text-align: center;
+  color: var(--secondary-color);
 }
 
 #intro .border {
