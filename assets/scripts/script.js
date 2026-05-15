@@ -3,77 +3,35 @@ const questions = [
     {
         question: "For what occasion do you require our service?",
         answers: [
-            {
-                text: "Learn cooking techniques",
-                score: ""
-            },
-            {
-                text: "Romantic dinner",
-                score: ""
-            },
-            {
-                text: "Family gathering",
-                score: ""
-            },
-            {
-                text: "Special event",
-                score: ""
-            }
+            { text: "Learn cooking techniques", category: "cookingLessons" },
+            { text: "Romantic dinner", category: "privateDining" },
+            { text: "Family gathering", category: "privateDining, specialEvent" },
+            { text: "Special event", category: "specialEvent" }
         ]
     },
     {
-        question: "How many guest will be attending?",
+        question: "How many guests will be attending?",
         answers: [
-            {
-                text: "0",
-                score: ""
-            },
-            {
-                text: "2",
-                score: ""
-            },
-            {
-                text: "3-6",
-                score: ""
-            },
-            {
-                text: "7+",
-                score: ""
-            }
+            { text: "0", category: "cookingLessons" },
+            { text: "2", category: "privateDining" },
+            { text: "3-6", category: "privateDining, specialEvent" },
+            { text: "7+", category: "specialEvent" }
         ]
     },
     {
         question: "What kind of experience are you looking for?",
         answers: [
-            {
-                text: "An interactive cooking lesson",
-                score: ""
-            },
-            {
-                text: "A relaxed dining experience",
-                score: ""
-            },
-            {
-                text: "Host a memorable event",
-                score: ""
-            }
+            { text: "An interactive cooking lesson", category: "cookingLessons" },
+            { text: "A relaxed dining experience", category: "privateDining" },
+            { text: "Host a memorable event", category: "specialEvent" }
         ]
     },
     {
         question: "What atmosphere would you like to create?",
         answers: [
-            {
-                text: "Warm and casual",
-                score: ""
-            },
-            {
-                text: "Elegant and intimate",
-                score: ""
-            },
-            {
-                text: "Lively and celebratory",
-                score: ""
-            }
+            { text: "Warm and casual", category: "cookingLessons" },
+            { text: "Elegant and intimate", category: "privateDining" },
+            { text: "Lively and celebratory", category: "specialEvent" }
         ]
     }
 ];

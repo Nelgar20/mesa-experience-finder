@@ -57,7 +57,7 @@ button {
   max-width: fit-content;
 }
 
-.btn:hover {
+button:hover {
   color: var(--primary-color);
   background-color: var(--secondary-color);
   cursor: pointer;
