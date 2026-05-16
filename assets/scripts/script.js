@@ -121,6 +121,7 @@ function nextQuestion() {
     }
 }
 
+// Display results cards
 function showResult() {
     quizSection.classList.add("hide");
 
@@ -142,3 +143,5 @@ function showResult() {
         specialEventCard.classList.remove("hide");
     }
 }
+
+// Restart the quiz
