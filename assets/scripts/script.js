@@ -46,22 +46,20 @@ let score = {
 
 // HTML elements
 const startBtn = document.getElementById("str-btn");
+const nextBtn = document.getElementById("nxt-btn");
 const introSection = document.getElementById("intro");
 const quizSection = document.getElementById("quiz-box");
 const questionText = document.getElementById("question-text");
-const answerButtons = document.getElementById("answer-btn")
+const answerButtons = document.getElementById("answer-btn");
 
-const privateDiningCard = document.getElementById("private-dining")
-const specialEventCard = document.getElementById("special-events")
-const cookingLessonsCard = document.getElementById("cooking-lessons")
+const privateDiningCard = document.getElementById("private-dining");
+const specialEventCard = document.getElementById("special-events");
+const cookingLessonsCard = document.getElementById("cooking-lessons");  
 
 
 // Start quiz
 startBtn.addEventListener("click", startQuiz);
 
-// Functions
-
-// Start the quiz
 function startQuiz() {
     currentQuestionIndex = 0;
 
@@ -81,7 +79,7 @@ function showQuestion() {
     currentQuestion.answers.forEach(function(answer) {
         const button = document.createElement("button");
         button.textContent = answer.text;
-        button.classList.add("answer-btn","border")
+        button.classList.add("answer-btn","border");
         answerButtons.appendChild(button);
 
         button.addEventListener("click", function() {
@@ -91,6 +89,19 @@ function showQuestion() {
             });
 
             button.classList.add("selected");
-        })
-    })
+        });
+    });
+}
+
+// Next question
+nextBtn.addEventListener("click", nextQuestion);
+
+function nextQuestion() {
+    currentQuestionIndex++;
+
+    if(currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        showResult();
+    }
 }
