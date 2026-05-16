@@ -48,7 +48,8 @@ let score = {
 // HTML elements
 const startBtn = document.getElementById("str-btn");
 const nextBtn = document.getElementById("nxt-btn");
-const restartBtn = document.getElementById("restart-btn")
+const restartBtn = document.getElementById("restart-btn");
+
 const introSection = document.getElementById("intro");
 const quizSection = document.getElementById("quiz-box");
 const questionText = document.getElementById("question-text");
@@ -70,6 +71,11 @@ function startQuiz() {
         privateDining: 0,
         specialEvent: 0
     }
+
+    cookingLessonsCard.classList.add("hide");
+    privateDiningCard.classList.add("hide");
+    specialEventCard.classList.add("hide");
+    restartBtn.classList.add("hide");
 
     introSection.classList.add("hide");
     quizSection.classList.remove("hide");
