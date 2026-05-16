@@ -14,7 +14,7 @@ const questions = [
         answers: [
             { text: "0", category: ["cookingLessons"] },
             { text: "2", category: ["privateDining"] },
-            { text: "3-6", category: ["privateDining", "specialEvent"] },
+            { text: "3-6", category: ["privateDining"] },
             { text: "7+", category: ["specialEvent"] }
         ]
     },
@@ -101,12 +101,12 @@ function showQuestion() {
 nextBtn.addEventListener("click", nextQuestion);
 
 function nextQuestion() {
-    if (selectedAnswers=== null) {
+    if (selectedAnswers === null) {
         alert("Please select an answer to continue!");
         return;
     }
 
-    selectedAnswers.forEach(function(category) {
+    selectedAnswers.forEach(function (category) {
         score[category]++;
     });
 
@@ -118,5 +118,27 @@ function nextQuestion() {
         showQuestion();
     } else {
         showResult();
+    }
+}
+
+function showResult() {
+    quizSection.classList.add("hide");
+
+    const highScore = Math.max(
+        score.cookingLessons,
+        score.privateDining,
+        score.specialEvent
+    );
+    
+    if (score.cookingLessons === highScore) {
+        cookingLessonsCard.classList.remove("hide");
+    }
+
+    if (score.privateDining === highScore) {
+        privateDiningCard.classList.remove("hide");
+    }
+
+    if (score.specialEvent === highScore) {
+        specialEventCard.classList.remove("hide");
     }
 }
