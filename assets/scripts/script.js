@@ -5,7 +5,7 @@ const questions = [
         answers: [
             { text: "Learn cooking techniques", category: ["cookingLessons"] },
             { text: "Romantic dinner", category: ["privateDining"] },
-            { text: "Family gathering", category: ["privateDining", "specialEvent"] },
+            { text: "Family gathering", category: ["privateDining"] },
             { text: "Special event", category: ["specialEvent"] }
         ]
     },
