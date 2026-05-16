@@ -101,11 +101,17 @@ function showQuestion() {
 nextBtn.addEventListener("click", nextQuestion);
 
 function nextQuestion() {
+    if (selectedAnswers=== null) {
+        alert("Please select an answer to continue!");
+        return;
+    }
+
     selectedAnswers.forEach(function(category) {
         score[category]++;
     });
 
     currentQuestionIndex++;
+    selectedAnswers = null;
     console.log(score)
 
     if (currentQuestionIndex < questions.length) {
