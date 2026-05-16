@@ -5,7 +5,7 @@ const questions = [
         answers: [
             { text: "Learn cooking techniques", category: ["cookingLessons"] },
             { text: "Romantic dinner", category: ["privateDining"] },
-            { text: "Family gathering", category: ["privateDining", "specialEvent"] },
+            { text: "Family gathering", category: ["privateDining","specialEvent"] },
             { text: "Special event", category: ["specialEvent"] }
         ]
     },
@@ -29,7 +29,7 @@ const questions = [
     {
         question: "What atmosphere would you like to create?",
         answers: [
-            { text: "Warm and casual", category: ["cookingLessons"] },
+            { text: "Warm and casual", category: ["cookingLessons","privateDining"] },
             { text: "Elegant and intimate", category: ["privateDining"] },
             { text: "Lively and celebratory", category: ["specialEvent"] }
         ]
