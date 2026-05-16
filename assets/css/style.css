@@ -33,16 +33,19 @@ h2 {
   text-align: center;
 }
 
-button {
+.answer-btn {
   font-family: var(--primary-font);
   font-size: 30px;
   width: 100%;
   margin: 5px;
-  /* border: 2px solid #ffad1f; */
-  /* border-radius: 25%; */
   color: var(--secondary-color);
   background-color: var(--primary-color);
-  /* padding: 3px 20px; */
+}
+
+.answer-btn.selected {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  cursor: pointer;
 }
 
 .btn {

@@ -75,4 +75,22 @@ function startQuiz() {
 function showQuestion() {
     const currentQuestion = questions[currentQuestionIndex];
 
+    questionText.textContent = currentQuestion.question;
+    answerButtons.innerHTML = "";
+
+    currentQuestion.answers.forEach(function(answer) {
+        const button = document.createElement("button");
+        button.textContent = answer.text;
+        button.classList.add("answer-btn","border")
+        answerButtons.appendChild(button);
+
+        button.addEventListener("click", function() {
+            const buttons = document.querySelectorAll(".answer-btn");
+            buttons.forEach(function(button) {
+                button.classList.remove("selected");
+            });
+
+            button.classList.add("selected");
+        })
+    })
 }
