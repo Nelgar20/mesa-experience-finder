@@ -5,7 +5,7 @@ const questions = [
         answers: [
             { text: "Learn cooking techniques", category: ["cookingLessons"] },
             { text: "Romantic dinner", category: ["privateDining"] },
-            { text: "Family gathering", category: ["privateDining","specialEvent"] },
+            { text: "Family gathering", category: ["privateDining", "specialEvent"] },
             { text: "Special event", category: ["specialEvent"] }
         ]
     },
@@ -29,7 +29,7 @@ const questions = [
     {
         question: "What atmosphere would you like to create?",
         answers: [
-            { text: "Warm and casual", category: ["cookingLessons","privateDining"] },
+            { text: "Warm and casual", category: ["cookingLessons", "privateDining"] },
             { text: "Elegant and intimate", category: ["privateDining"] },
             { text: "Lively and celebratory", category: ["specialEvent"] }
         ]
@@ -48,6 +48,7 @@ let score = {
 // HTML elements
 const startBtn = document.getElementById("str-btn");
 const nextBtn = document.getElementById("nxt-btn");
+const restartBtn = document.getElementById("restart-btn")
 const introSection = document.getElementById("intro");
 const quizSection = document.getElementById("quiz-box");
 const questionText = document.getElementById("question-text");
@@ -63,7 +64,12 @@ startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
     currentQuestionIndex = 0;
-    selectedAnswers = null
+    selectedAnswers = null;
+    score = {
+        cookingLessons: 0,
+        privateDining: 0,
+        specialEvent: 0
+    }
 
     introSection.classList.add("hide");
     quizSection.classList.remove("hide");
@@ -130,7 +136,7 @@ function showResult() {
         score.privateDining,
         score.specialEvent
     );
-    
+
     if (score.cookingLessons === highScore) {
         cookingLessonsCard.classList.remove("hide");
     }
@@ -142,6 +148,9 @@ function showResult() {
     if (score.specialEvent === highScore) {
         specialEventCard.classList.remove("hide");
     }
+
+    restartBtn.classList.remove("hide")
 }
 
 // Restart the quiz
+restartBtn.addEventListener("click", startQuiz);
