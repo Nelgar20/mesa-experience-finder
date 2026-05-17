@@ -37,7 +37,7 @@ const questions = [
 ];
 
 let currentQuestionIndex = 0;
-let selectedAnswers = null
+let selectedAnswers = null;
 
 let score = {
     cookingLessons: 0,
@@ -70,7 +70,7 @@ function startQuiz() {
         cookingLessons: 0,
         privateDining: 0,
         specialEvent: 0
-    }
+    };
 
     cookingLessonsCard.classList.add("hide");
     privateDiningCard.classList.add("hide");
@@ -124,7 +124,6 @@ function nextQuestion() {
 
     currentQuestionIndex++;
     selectedAnswers = null;
-    console.log(score)
 
     if (currentQuestionIndex < questions.length) {
         showQuestion();
@@ -155,7 +154,7 @@ function showResult() {
         specialEventCard.classList.remove("hide");
     }
 
-    restartBtn.classList.remove("hide")
+    restartBtn.classList.remove("hide");
 }
 
 // Restart the quiz
