@@ -151,3 +151,11 @@ button:hover {
 #restart-btn {
   margin-top: 3rem;
 }
+
+/* Extra small devices */
+/* Make the font size of the button smaller */
+@media screen and (max-width: 320px) {
+  .btn {
+    font-size: 55px;
+  }
+}
