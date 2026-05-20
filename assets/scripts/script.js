@@ -1,7 +1,7 @@
 // Questions and answers
 const questions = [
     {
-        question: "For what occasion do you require our service?",
+        question: "What occasion do you need our service for?",
         answers: [
             { text: "Learn cooking techniques", category: ["cookingLessons"] },
             { text: "Romantic dinner", category: ["privateDining"] },
@@ -12,7 +12,7 @@ const questions = [
     {
         question: "How many guests will be attending?",
         answers: [
-            { text: "0", category: ["cookingLessons"] },
+            { text: "Just me", category: ["cookingLessons"] },
             { text: "2", category: ["privateDining"] },
             { text: "3-6", category: ["privateDining"] },
             { text: "7+", category: ["specialEvent"] }

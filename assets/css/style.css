@@ -1,8 +1,8 @@
 
-/* Css variables */
+/* CSS variables */
 :root {
-  --primary-font: "raleway", sans-serif;
-  --secondary-font: "tangerine", sans-serif;
+  --primary-font: "Raleway", sans-serif;
+  --secondary-font: "Tangerine", cursive;
   --primary-color: #201109; /* Dark Brown */
   --secondary-color: #ffad1f; /* Golden Orange*/
 }
@@ -159,8 +159,8 @@ button:hover {
   margin-top: 3rem;
 }
 
-/* Extra small devices */
-/* Make the font size of the button smaller */
+/* Extra-small devices */
+/* Reduce button font size on very small screens */
 @media screen and (max-width: 320px) {
   .btn {
     font-size: 55px;
