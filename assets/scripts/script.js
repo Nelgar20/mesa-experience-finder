@@ -55,6 +55,7 @@ const quizSection = document.getElementById("quiz-box");
 const questionText = document.getElementById("question-text");
 const answerButtons = document.getElementById("answer-btn");
 
+const resultText = document.getElementById("result-text");
 const privateDiningCard = document.getElementById("private-dining");
 const specialEventCard = document.getElementById("special-events");
 const cookingLessonsCard = document.getElementById("cooking-lessons");
@@ -135,6 +136,7 @@ function nextQuestion() {
 // Display results cards
 function showResult() {
     quizSection.classList.add("hide");
+    resultText.classList.remove("hide");
 
     const highScore = Math.max(
         score.cookingLessons,

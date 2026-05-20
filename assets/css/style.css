@@ -107,7 +107,14 @@ button:hover {
 }
 
 /* Result section */
+#result h2 {
+  text-align: center;
+  font-size: 25px;
+}
 
+#result a {
+  color: orangered;
+}
 
 .card {
   max-width: 500px;
