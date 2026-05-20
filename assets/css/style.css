@@ -1,8 +1,8 @@
 
 /* Css variables */
 :root {
-  --primary-font: "raleway", sans-serif;
-  --secondary-font: "tangerine", sans-serif;
+  --primary-font: "Raleway", Arial, sans-serif;
+  --secondary-font: "Tangerine", Georgia, serif;
   --primary-color: #201109; /* Dark Brown */
   --secondary-color: #ffad1f; /* Golden Orange*/
 }
